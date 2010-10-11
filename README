@@ -1,0 +1,27 @@
+Ejemplo de uso Stack y Queue
+
+Juan Germán Castañeda Echevarría <juanger@ciencias.unam.x>
+
+Diseño
+
+La solución cuenta con las siguientes clases:
+
+ * Coloreador: Colorea usando un algoritmo tipo "Bote de Pintura" un arreglo de Pixeles.
+               Puede usar tanto una cola como una pila.
+
+ * Pixel: Es una clase interna (nótese que no es pública). Representa un Pixel en una imagen.
+
+ * UsoColoreadorEnteros: Utiliza el Coloreador y Enteros para representar colores.
+                         Imprime con color en terminales que aceptan sequencias de escape ANSI
+
+La clase coloreador implementa el mismo algoritmo dos veces, una utilizando una pila y otra con
+una cola. Utiliza genéricos para definir qué clase representa el color de un Pixel. En la clase
+de uso se utiliza un objeto Integer como lo vimos en clase pero podría usarse la clase Color o
+cualquier otra pues sólo depende de que implemente el método equals para poder comparar colores.
+
+Corriendo el ejemplo
+
+Para correr el ejemplo se debe utilizar una línea como la siguiente:
+
+$ mvn compile exec:java \
+        -Dexec.mainClass="mx.unam.fciencias.icc2.ejemplos.UsoColoreadorEnteros" -o
